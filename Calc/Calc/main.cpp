@@ -3,43 +3,31 @@
 
 class Cal {
 public:
-<<<<<<< HEAD
+
 	// �̰��� �ڵ��ۼ�
-
-=======
-
-
-	// 이곳에 코드작성
-
-	// 이곳에 코드작성
-
 	int Zegop(int a) { return a * a; }
->>>>>>> ccfb9321331c61969a8523f36aef393f2612e732
+
 	int getGop(int a, int b) {
 		return a * b;
-
 	}
-<<<<<<< HEAD
+
 	int getSum(int a, int b) { return a + b; }
-=======
-  
+
 	int getDivide(int a, int b) {
 		if (b == 0) {
-			std::cout << "0쇰   듬\n";
+			std::cout << "0���� ������ �����\n";
 			return -1;
 		}
 		return a / b;
-  }
->>>>>>> ccfb9321331c61969a8523f36aef393f2612e732
+	}
 
 };
 
 
-// ㅽ 耳댁 
 TEST(t1, t2) {
 	EXPECT_EQ(1, 1);
 }
-// 테스트 케이스 작성
+
 TEST(CalcTC, Zegop1) {
 	Cal cal;
 	int a = 4;
@@ -53,15 +41,16 @@ TEST(CalcTC, Zegop1) {
 
 TEST(CalTest, getGopTest) {
 	Cal cal;
-	
-	EXPECT_EQ( cal.getGop(1,1), 1);
+
+	EXPECT_EQ(cal.getGop(1, 1), 1);
 	EXPECT_EQ(cal.getGop(1, -1), -1);
 	EXPECT_EQ(cal.getGop(-1, -1), 1);
 	EXPECT_EQ(cal.getGop(0, 0), 0);
 	EXPECT_EQ(cal.getGop(0, 1), 0);
-	EXPECT_EQ(cal.getGop(456, 123), 456*123);
-  
-  TEST(t1, dividetest) {
+	EXPECT_EQ(cal.getGop(456, 123), 456 * 123);
+}
+
+TEST(t1, dividetest) {
 	Cal cal = Cal();
 	int actual = cal.getDivide(2, 1);
 	int expected = 2;
