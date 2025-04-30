@@ -1,15 +1,29 @@
+#include <iostream>
 #include "gmock/gmock.h"
 
 class Cal {
 public:
-	// ÀÌ°÷¿¡ ÄÚµåÀÛ¼º
+	// ì´ê³³ì— ì½”ë“œì‘ì„±
+	int getDivide(int a, int b) {
+		if (b == 0) {
+			std::cout << "0ìœ¼ë¡œ ë‚˜ëˆŒ ìˆ˜ ì—†ìŠµë‹ˆë‹¤\n";
+			return -1;
+		}
+		return a / b;
+	}
 };
 
-// Å×½ºÆ® ÄÉÀÌ½º ÀÛ¼º
+// í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ ì‘ì„±
 TEST(t1, t2) {
 	EXPECT_EQ(1, 1);
 }
 
+TEST(t1, dividetest) {
+	Cal cal = Cal();
+	int actual = cal.getDivide(2, 1);
+	int expected = 2;
+	EXPECT_EQ(actual, expected);
+}
 
 int main() {
 	::testing::InitGoogleMock();
