@@ -12,7 +12,8 @@ TEST(t1, t2) {
 }
 
 TEST(t1, addtest) {
-	int actual = getSum(1, 2);
+	Cal cal = Cal();
+	int actual = cal.getSum(1, 2);
 	int expected = 3;
 	EXPECT_EQ(actual, expected);
 }
